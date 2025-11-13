@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Навчальний Проєкт</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__content container">
+        <h1 class="header__title">Мій Навчальний Проєкт</h1>
+        <button id="themeSwitcher" class="theme-button" aria-label="Змінити тему">🌙</button>
+      </div>
+    </header>
+
+    <main class="main container">
+      <section class="intro">
+        <h2 class="intro__title">Вступ</h2>
+        <p class="intro__text">
+          Це простий навчальний проєкт з HTML, CSS та JavaScript. Тут є перемикач теми, модальне
+          вікно, збереження теми в localStorage.
+        </p>
+      </section>
+
+      <section class="cv">
+        <h2 class="cv__title">Резюме</h2>
+        <div class="cv__content">
+          <div class="cv__header">
+            <h3 class="cv__name" id="cvName">Іван</h3>
+            <h3 class="cv__surname" id="cvSurname">Петренко</h3>
+          </div>
+
+          <div class="cv__section">
+            <h4 class="cv__section-title">Контактна інформація</h4>
+            <div class="cv__info">
+              <div class="cv__info-item">
+                <span class="cv__label">Телефон:</span>
+                <span class="cv__value" id="cvPhone">+380 50 123 4567</span>
+              </div>
+              <div class="cv__info-item">
+                <span class="cv__label">Email:</span>
+                <span class="cv__value" id="cvEmail">ivan.petrenko@example.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv__section">
+            <h4 class="cv__section-title">Про себе</h4>
+            <p class="cv__description" id="cvDescription">
+              Досвідчений веб-розробник з більш ніж 5 роками досвіду у створенні сучасних веб-додатків.
+              Спеціалізуюся на фронтенд-розробці з використанням JavaScript, React та Vue.js.
+              Маю глибокі знання HTML, CSS та сучасних фреймворків. Прагну до створення
+              інтуїтивних та ефективних користувацьких інтерфейсів.
+            </p>
+          </div>
+
+          <div class="cv__section">
+            <h4 class="cv__section-title">Досвід роботи</h4>
+            <div class="cv__experience" id="cvExperience">
+              <div class="cv__experience-item">
+                <div class="cv__experience-header">
+                  <span class="cv__experience-position">Senior Frontend Developer</span>
+                  <span class="cv__experience-period">2021 - дотепер</span>
+                </div>
+                <div class="cv__experience-company">Tech Solutions Inc.</div>
+                <p class="cv__experience-description">
+                  Розробка та підтримка веб-додатків на React. Керівництво командою з 3 розробників.
+                  Оптимізація продуктивності додатків та впровадження найкращих практик.
+                </p>
+              </div>
+              <div class="cv__experience-item">
+                <div class="cv__experience-header">
+                  <span class="cv__experience-position">Frontend Developer</span>
+                  <span class="cv__experience-period">2019 - 2021</span>
+                </div>
+                <div class="cv__experience-company">Web Studio Pro</div>
+                <p class="cv__experience-description">
+                  Розробка адаптивних веб-сайтів та інтерфейсів. Співпраця з дизайнерами та
+                  бекенд-розробниками. Використання Vue.js та TypeScript.
+                </p>
+              </div>
+              <div class="cv__experience-item">
+                <div class="cv__experience-header">
+                  <span class="cv__experience-position">Junior Web Developer</span>
+                  <span class="cv__experience-period">2018 - 2019</span>
+                </div>
+                <div class="cv__experience-company">Startup Hub</div>
+                <p class="cv__experience-description">
+                  Розробка лендінгів та корпоративних сайтів. Вивчення сучасних технологій та
+                  фреймворків. Підтримка існуючих проектів.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv__section">
+            <h4 class="cv__section-title">Мови</h4>
+            <div class="cv__languages" id="cvLanguages">
+              <div class="cv__language-item">
+                <span class="cv__language-name">Українська</span>
+                <span class="cv__language-level">Рідна</span>
+              </div>
+              <div class="cv__language-item">
+                <span class="cv__language-name">Англійська</span>
+                <span class="cv__language-level">Вільне володіння</span>
+              </div>
+              <div class="cv__language-item">
+                <span class="cv__language-name">Польська</span>
+                <span class="cv__language-level">Середній рівень</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv__section">
+            <h4 class="cv__section-title">Навички</h4>
+            <div class="cv__skills" id="cvSkills">
+              <span class="cv__skill">HTML5</span>
+              <span class="cv__skill">CSS3</span>
+              <span class="cv__skill">JavaScript</span>
+              <span class="cv__skill">React</span>
+              <span class="cv__skill">Vue.js</span>
+              <span class="cv__skill">TypeScript</span>
+              <span class="cv__skill">Node.js</span>
+              <span class="cv__skill">Git</span>
+              <span class="cv__skill">Webpack</span>
+              <span class="cv__skill">SASS</span>
+            </div>
+          </div>
+
+          <div class="cv__section">
+            <h4 class="cv__section-title">Освіта</h4>
+            <div class="cv__education" id="cvEducation">
+              <div class="cv__education-item">
+                <div class="cv__education-header">
+                  <span class="cv__education-degree">Бакалавр комп'ютерних наук</span>
+                  <span class="cv__education-period">2014 - 2018</span>
+                </div>
+                <div class="cv__education-institution">Національний університет ім. Тараса Шевченка</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="comments">
+        <h2 class="comments__title">Коментарі</h2>
+        <div id="commentsContainer" class="comments__list">Завантаження...</div>
+      </section>
+
+      <section class="browser">
+        <h2 class="footer__title">Інформація про браузер</h2>
+        <pre id="browserData" class="footer__browser-info"></pre>
+      </section>
+    </main>
+
+    <div class="modal modal--hidden" id="feedbackModal">
+      <div class="modal__content">
+        <h2 class="modal__title">Зворотній зв'язок</h2>
+        <form id="feedbackForm">
+          <label class="form__label" for="name">Ім’я</label>
+          <input class="form__input" type="text" id="name" name="name" required />
+
+          <label class="form__label" for="email">Електронна пошта</label>
+          <input class="form__input" type="email" id="email" name="email" required />
+
+          <label class="form__label" for="message">Повідомлення</label>
+          <textarea class="form__textarea" id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="form__button">Надіслати</button>
+        </form>
+
+        <button class="modal__close" id="closeModal">Закрити</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
