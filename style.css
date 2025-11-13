@@ -1,0 +1,537 @@
+/* =========================
+   Змінні кольорів і стилів
+========================= */
+:root {
+  --bg-light: #ffffff;
+  --text-light: #1a1a1a;
+  --header-footer-light: #f4f4f4;
+
+  --bg-dark: #121212;
+  --text-dark: #f0f0f0;
+  --header-footer-dark: #1c1c1c;
+
+  --accent: #007bff;
+  --border-radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   Базові стилі
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1, h2 {
+  margin-bottom: 0.5em;
+}
+
+/* =========================
+   Хедер
+========================= */
+.header {
+  background-color: var(--header-footer-light);
+  color: white;
+  padding: 20px 0;
+  transition: background-color 0.3s ease;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.theme-button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* =========================
+   Основний контент
+========================= */
+.intro,
+.cv,
+.comments,
+.browser {
+  margin-top: 30px;
+}
+
+.comments__title {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+/* =========================
+   CV блок
+========================= */
+.cv {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.cv__title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+.cv__content {
+  max-width: 100%;
+}
+
+.cv__header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.cv__name,
+.cv__surname {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0.5rem;
+  color: var(--text-light);
+}
+
+.cv__section {
+  margin-bottom: 2rem;
+}
+
+.cv__section-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+.cv__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cv__info-item {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cv__label {
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.cv__value {
+  color: var(--text-light);
+}
+
+.cv__description {
+  line-height: 1.8;
+  text-align: justify;
+  color: var(--text-light);
+}
+
+.cv__experience {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cv__experience-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv__experience-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cv__experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cv__experience-position {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.cv__experience-period {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.cv__experience-company {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: var(--text-light);
+}
+
+.cv__experience-description {
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.cv__languages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cv__language-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cv__language-name {
+  font-weight: 600;
+}
+
+.cv__language-level {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.cv__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.cv__skill {
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cv__skill:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+.cv__education {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cv__education-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cv__education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cv__education-degree {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.cv__education-period {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.cv__education-institution {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.comments__list > div {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f6f6f6;
+  border-left: 5px solid var(--accent);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.footer__title {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.footer__browser-info {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  overflow-x: auto;
+}
+
+/* =========================
+   Модальне вікно
+========================= */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal--hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal__content {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  animation: modalFadeIn 0.4s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal__close {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.5rem 1rem;
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal__close:hover {
+  background-color: #999;
+}
+
+/* =========================
+   Форми
+========================= */
+#feedbackForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__label {
+  font-weight: 600;
+}
+
+.form__input,
+.form__textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.form__button {
+  padding: 0.75rem;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.form__button:hover {
+  background-color: #0056b3;
+}
+
+/* =========================
+   Темна тема
+========================= */
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark .header {
+  background-color: var(--header-footer-dark);
+}
+
+body.dark .comments__list > div {
+  background-color: #1e1e1e;
+}
+
+body.dark .cv {
+  background-color: #1e1e1e;
+}
+
+body.dark .cv__name,
+body.dark .cv__surname {
+  color: var(--text-dark);
+}
+
+body.dark .cv__value,
+body.dark .cv__description {
+  color: var(--text-dark);
+}
+
+body.dark .cv__experience-item {
+  background-color: #2a2a2a;
+  border-left-color: #3498db;
+}
+
+body.dark .cv__experience-position {
+  color: #3498db;
+}
+
+body.dark .cv__experience-period {
+  color: #aaa;
+}
+
+body.dark .cv__experience-company,
+body.dark .cv__experience-description {
+  color: var(--text-dark);
+}
+
+body.dark .cv__language-item {
+  background-color: #2a2a2a;
+}
+
+body.dark .cv__language-level {
+  color: #aaa;
+}
+
+body.dark .cv__education-item {
+  background-color: #2a2a2a;
+  border-left-color: #3498db;
+}
+
+body.dark .cv__education-degree {
+  color: #3498db;
+}
+
+body.dark .cv__education-period {
+  color: #aaa;
+}
+
+body.dark .cv__education-institution {
+  color: var(--text-dark);
+}
+
+body.dark .footer__browser-info {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark .form__input,
+body.dark .form__textarea {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark .form__button {
+  background-color: #3498db;
+}
+
+body.dark .form__button:hover {
+  background-color: #2980b9;
+}
+
+body.dark .modal__content {
+  background-color: #2c2c2c;
+  color: var(--text-dark);
+}
